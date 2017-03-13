@@ -1,0 +1,29 @@
+<%= simple_form_for(@todo_list) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+  </div>
+  <h3>Tasks</h3>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Task Name</th>
+        <th>Completed</th>
+      </tr>
+    </thead>
+    <tbody class='tasks'>
+      <%= f.simple_fields_for :tasks do |builder| %>
+        <%= render 'task_fields', f: builder %>
+      <% end %>
+    </tbody>
+
+  </table>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to_add_association 'Add Task', f, :tasks, class: 'btn btn-primary', data: { association_insertion_node: '.tasks', association_insertion_method: :append } %>
+  </div>
+<% end %>

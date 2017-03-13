@@ -50,6 +50,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    cocoon (1.2.9)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -171,6 +172,7 @@ DEPENDENCIES
   better_errors
   bootstrap-sass
   byebug
+  cocoon
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
@@ -189,4 +191,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.14.5
+   1.14.6
